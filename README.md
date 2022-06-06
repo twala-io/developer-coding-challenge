@@ -44,13 +44,14 @@ The result should be a dashboard with two pages (the application can be single-p
 * You are free to use any third-party libraries.
 * Have fun and be as creative as you like!
 * Please feel free to reach out to ask any questions (paul.quinit@twala.io).
+* Use of Docker is a plus!
+* Adding unit tests is also a plus!
 
 ## How to Submit This Challenge
 1. Fork this repository
 2. Work on your solution
 3. Deploy the frontend and backend of your application using free services (Netlify, Heroku, etc).
 4. Create a pull request with @github/apquinit as the reviewer. Send us an email at paul.quinit@twala.io when you're ready to have it reviewed.
-5. Use of Docker is a plus!
 
 ## Timeframe
 
