@@ -42,7 +42,7 @@ The result should be a dashboard with two pages (the application can be single-p
 * Have fun and be as creative as you like!
 * Please feel free to reach out to ask any questions (paul.quinit@twala.io).
 
-## How to submit this challenge:
+## How to Submit This Challenge
 1. Fork this repository
 2. Work on your solution
 3. Deploy the frontend and backend of your application using free services (Netlify, Heroku, etc).
