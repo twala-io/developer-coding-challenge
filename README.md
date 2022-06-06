@@ -39,9 +39,6 @@ The result should be a dashboard with two pages (the application can be single-p
     * Display each Alert category (*errorCategory*).
     * Display each Alert time (*errorTime*).
     * Allow sorting on the category.
-    * Create new aler.
-    * Update existing alert.
-    * Delete alert.
 
 ## Additional Information
 * You are free to use any third-party libraries.
