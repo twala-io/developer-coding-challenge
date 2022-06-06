@@ -31,11 +31,17 @@ The result should be a dashboard with two pages (the application can be single-p
     * Display the total different Contact states (*contactState*).
     * For each Contact, display Name (*contactName*), Status (*contactStatus*), and Begin/End timestamp (*contactBeginTimestamp/contactEndTimestamp*).
     * Allow sorting on the name.
+    * Create new contact.
+    * Update existing contact.
+    * Delete contact.
   * The following should be displayed in the Alerts pane:
     * Display each Alert message (*errorMessage*).
     * Display each Alert category (*errorCategory*).
     * Display each Alert time (*errorTime*).
     * Allow sorting on the category.
+    * Create new aler.
+    * Update existing alert.
+    * Delete alert.
 
 ## Additional Information
 * You are free to use any third-party libraries.
