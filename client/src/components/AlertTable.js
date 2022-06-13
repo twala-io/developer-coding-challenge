@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import moment from "moment";
 
-const Table = ({ posts, loading }) => {
+const AlertTable = ({ posts, loading }) => {
   const [data, setData] = useState(posts);
+
   useEffect(() => {
     setData(posts);
   }, [posts]);
@@ -13,7 +14,6 @@ const Table = ({ posts, loading }) => {
   }
 
   const sorting = (col) => {
-    console.log("clicked");
     if (order === "ASC") {
       const sorted = [...data].sort((a, b) =>
         a[col].toString().toLowerCase() > b[col].toString().toLowerCase()
@@ -39,7 +39,7 @@ const Table = ({ posts, loading }) => {
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-md-6 text-center mb-5">
-            <h2 className="heading-section">Clients Tables</h2>
+            <h2 className="heading-section">Alerts Tables</h2>
           </div>
         </div>
         <div className="row">
@@ -48,27 +48,21 @@ const Table = ({ posts, loading }) => {
               <table className="table">
                 <thead className="thead-dark">
                   <tr>
-                    <th>#</th>
-                    <th onClick={() => sorting("contactName")}>Contact Name</th>
-                    <th>Contact Status</th>
-                    <th>Contact Begin Time</th>
-                    <th>Contact End Time</th>
+                    <th>Alert Message</th>
+                    <th onClick={() => sorting("errorCategory")}>
+                      Alert Category
+                    </th>
+                    <th>Alert Time</th>
                   </tr>
                 </thead>
                 <tbody>
                   {data.map((item, index) => {
                     return (
                       <tr key={index} className="alert" role="alert">
-                        <th scope="row">{index + 1}</th>
-                        <th>{item.contactName}</th>
-                        <th>{item.contactStatus}</th>
+                        <th>{item.errorMessage}</th>
+                        <th>{item.errorCategory}</th>
                         <th>
-                          {moment(item.contactBeginTimestamp).format(
-                            "MMM-DD-YYYY hh:mm"
-                          )}
-                        </th>
-                        <th>
-                          {moment(item.contactEndTimestamp).format(
+                          {moment(parseInt(item.errorTime)).format(
                             "MMM-DD-YYYY hh:mm"
                           )}
                         </th>
@@ -85,4 +79,4 @@ const Table = ({ posts, loading }) => {
   );
 };
 
-export default Table;
+export default AlertTable;

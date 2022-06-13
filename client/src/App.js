@@ -1,10 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Home from "./pages/Home";
 import Login from "./pages/Login";
 import SignUp from "./pages/Signup";
-import Dashboard from "./pages/Dashboard";
+import Dashboard from "./components/Dashboard";
 import Clients from "./pages/Clients";
 import Alerts from "./pages/Alerts";
 
@@ -12,7 +11,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />}></Route>
+        <Route path="/" element={<Login />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/signup" element={<SignUp />}></Route>
         <Route path="/dashboard" element={<Dashboard />}></Route>

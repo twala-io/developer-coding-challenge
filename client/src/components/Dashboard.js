@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import "./Dashboard.css";
+import "../assets/Dashboard.css";
 import * as IoIcons from "react-icons/io";
 import * as FiIcons from "react-icons/fi";
 function Dashboard() {

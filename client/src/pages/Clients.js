@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import "./Dashboard.css";
+import "../assets/Dashboard.css";
 import * as IoIcons from "react-icons/io";
 import * as FiIcons from "react-icons/fi";
-import Table from "./Table";
-import Pagination from "./Pagination";
+import ClientTable from "../components/ClientTable";
+import Pagination from "../components/Pagination";
 import Axios from "axios";
-import "./Table.css";
+import "../assets/Table.css";
 
 function Clients() {
   const SidebarData = [
@@ -28,18 +28,29 @@ function Clients() {
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(10);
+  const [totalContact, setTotalContact] = useState(0);
+  const [totalContactState, setTotalContactState] = useState(0);
 
   useEffect(() => {
     const fetchPosts = async () => {
       setLoading(true);
       Axios.post("http://localhost:5000/contact").then((response) => {
         if (response != null) {
-          console.log("response", response);
           setPosts(response.data);
           setLoading(false);
         } else {
           console.log("Error");
           setLoading(false);
+        }
+      });
+      Axios.get("http://localhost:5000/contactCount").then((response) => {
+        if (response != null) {
+          setTotalContact(response.data.data);
+        }
+      });
+      Axios.get("http://localhost:5000/contactCountState").then((response) => {
+        if (response != null) {
+          setTotalContactState(response.data.data);
         }
       });
     };
@@ -69,7 +80,9 @@ function Clients() {
       </div>
 
       <div className="container mt-5">
-        <Table posts={currentPosts} loading={loading} />
+        <ClientTable posts={currentPosts} loading={loading} />
+        <div>Total Contact: {totalContact}</div>
+        <div>Total Contact State: {totalContactState}</div>
         <Pagination
           postsPerPage={postsPerPage}
           totalPosts={posts.length}
