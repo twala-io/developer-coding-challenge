@@ -43,7 +43,7 @@ The result should be a dashboard with two pages (the application can be single-p
 ## Additional Information
 * You are free to use any third-party libraries.
 * Have fun and be as creative as you like!
-* Please feel free to reach out to ask any questions (paul.quinit@twala.io).
+* Please feel free to reach out to ask any questions.
 * Use of Docker is a plus!
 * Adding unit tests is also a plus!
 
@@ -51,7 +51,7 @@ The result should be a dashboard with two pages (the application can be single-p
 1. Fork this repository.
 2. Work on your solution.
 3. **If you are applying for a mid-level or senior-level role:** Deploy the frontend and backend of your application using free services (Netlify, Heroku, etc).
-4. Create a pull request with @github/apquinit and @github/edilsalvador as the reviewers. Send us an email at paul.quinit@twala.io and edil.salvador@twala.io when you're ready to have it reviewed.
+4. Create a pull request with @github/apquinit and @github/edilsalvador as the reviewers. Send us an email at paul.quinit@twala.io and edil.salvador@twala.io when you're ready to have it reviewed and schedule the tech interview.
 5. Include in your README documentation the steps on how to setup and run your project on another local machine.
 
 ## Timeframe
