@@ -48,8 +48,8 @@ The result should be a dashboard with two pages (the application can be single-p
 * Adding unit tests is also a plus!
 
 ## How to Submit This Challenge
-1. Fork this repository
-2. Work on your solution
+1. Fork this repository.
+2. Work on your solution.
 3. **If you are applying for a mid-level or senior-level role:** Deploy the frontend and backend of your application using free services (Netlify, Heroku, etc).
 4. Create a pull request with @github/apquinit as the reviewer. Send us an email at paul.quinit@twala.io when you're ready to have it reviewed.
 5. Include in your README documentation the steps on how to setup and run your project on another local machine.
